@@ -11,8 +11,8 @@
 
 .post-card {
 
-  padding-bottom: 20px;
-  margin: 20px 0;
+  height: 100%;
+  padding: 20px 0;
   border-bottom: 1px solid #eaeff1;
   font-size: 0.85rem;
   color: $main-text;
@@ -43,7 +43,7 @@
   @include device-is('tablet') {
     width: 260px;
     min-width: 260px;
-    margin: 20px 10px;
+    padding: 20px 10px;
   }
 
   @include device-is('tablet') {
