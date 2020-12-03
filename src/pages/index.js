@@ -17,6 +17,7 @@ export const query = graphql`
           frontmatter {
             category
             date
+            slug
             title
           }
           excerpt
@@ -29,7 +30,7 @@ export const query = graphql`
 
 export default function IndexPage({data}) {
   const cards = data.allMarkdownRemark.edges;
-console.log(cards)
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -40,14 +41,18 @@ console.log(cards)
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
       <div className="post-cards">
         {cards.map(({node: card}, index) => (
-          <PostCard
+          <Link
+            to={card.frontmatter.slug}
             key={index}
-            title={card.frontmatter.title}
-            date={card.frontmatter.date}
-            category={card.frontmatter.category}
-            excerpt={card.excerpt}
-            content={card.html}
-          ></PostCard>
+          >
+            <PostCard
+              title={card.frontmatter.title}
+              date={card.frontmatter.date}
+              category={card.frontmatter.category}
+              excerpt={card.excerpt}
+              content={card.html}
+            ></PostCard>
+          </Link>
         ))}
       </div>
     </Layout>
