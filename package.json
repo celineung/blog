@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-blog",
+  "name": "blog",
   "private": true,
   "description": "Blog construit sur le starter de Gatsby `gatsby-starter-default`",
   "version": "0.1.0",
@@ -45,9 +45,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/celineung/gatsby-blog"
+    "url": "https://github.com/celineung/blog"
   },
   "bugs": {
-    "url": "https://github.com/celineung/gatsby-blog/issues"
+    "url": "https://github.com/celineung/blog/issues"
   }
 }
