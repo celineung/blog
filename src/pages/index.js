@@ -7,31 +7,6 @@ import PostCard from "../components/post-card"
 
 import { graphql } from "gatsby"
 
-export const query = graphql`
-  query {
-    allMarkdownRemark (
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            category
-            date(
-              formatString: "DD MMMM YYYY"
-              locale: "fr-FR"
-            )
-            slug
-            title
-          }
-          excerpt
-          html
-        }
-      }
-    }
-  }
-`
-
 export default function IndexPage({data, location}) {
   const cards = data.allMarkdownRemark.edges;
 
@@ -60,3 +35,28 @@ export default function IndexPage({data, location}) {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allMarkdownRemark (
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            category
+            date(
+              formatString: "DD MMMM YYYY"
+              locale: "fr-FR"
+            )
+            slug
+            title
+          }
+          excerpt
+          html
+        }
+      }
+    }
+  }
+`
