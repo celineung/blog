@@ -1,6 +1,6 @@
 ---
 title: "Différencier equals et hashcode"
-date: "19 DEC 2019"
+date: "2019-12-19"
 category: "JAVA"
 slug: "equals-vs-hashcode"
 ---

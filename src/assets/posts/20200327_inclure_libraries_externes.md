@@ -1,6 +1,6 @@
 ---
 title: "Inclure mes libraries externes à mes projets front"
-date: "27 MARS 2020"
+date: "2020-03-27"
 category: "JS"
 slug: "inclure-libraries-externes-personnelles"
 ---

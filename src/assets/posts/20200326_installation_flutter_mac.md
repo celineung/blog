@@ -1,6 +1,6 @@
 ---
 title: "Installation de Flutter sur MacOS"
-date: "26 MARS 2020"
+date: "2020-03-26"
 category: "FLUTTER"
 slug: "installation-de-flutter-sur-macos"
 ---

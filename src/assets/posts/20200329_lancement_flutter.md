@@ -1,6 +1,6 @@
 ---
 title: "Lancement de ma première application Flutter sur mobile Android"
-date: "29 MARS 2020"
+date: "2020-03-29"
 category: "FLUTTER"
 slug: "lancement-de-flutter"
 ---

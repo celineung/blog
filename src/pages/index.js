@@ -9,14 +9,18 @@ import { graphql } from "gatsby"
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
-      totalCount
+    allMarkdownRemark (
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           id
           frontmatter {
             category
-            date
+            date(
+              formatString: "DD MMMM YYYY"
+              locale: "fr-FR"
+            )
             slug
             title
           }
