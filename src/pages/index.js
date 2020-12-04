@@ -37,7 +37,10 @@ export default function IndexPage({data}) {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        lang="fr"
+        title="Blog - Céline Ung"
+      />
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
