@@ -4,7 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
+  const isHomepage = location === '/'
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -18,7 +19,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="layout">
+      {isHomepage &&
+        <div className="layout__banner">
+          <h1 className="layout-banner__title">Blog de Céline</h1>
+          <div>tech &#8226; méthodologie &#8226; retour d'expérience</div>
+        </div>
+      }
+      <div className="layout__container">
         <main>{children}</main>
         <footer style={{
           marginTop: `2rem`

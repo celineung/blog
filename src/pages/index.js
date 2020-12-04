@@ -32,11 +32,11 @@ export const query = graphql`
   }
 `
 
-export default function IndexPage({data}) {
+export default function IndexPage({data, location}) {
   const cards = data.allMarkdownRemark.edges;
 
   return (
-    <Layout>
+    <Layout location={location.pathname}>
       <SEO
         lang="fr"
         title="Blog - Céline Ung"
