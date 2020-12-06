@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 
 const Layout = ({ children, location }) => {
-  const isHomepage = location === '/'
+  const isHomepage = location === process.env.GATSBY_ROOT_URL;
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -14,7 +14,7 @@ const Layout = ({ children, location }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -36,7 +36,7 @@ const Layout = ({ children, location }) => {
         </footer>
       </div>
     </>
-  )
+  );
 }
 
 Layout.propTypes = {
