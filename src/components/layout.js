@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import SEO from "./seo";
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, pageTitle }) => {
   const isHomepage = location === process.env.GATSBY_ROOT_URL;
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -20,7 +20,7 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <SEO />
+      <SEO pageTitle={pageTitle}/>
       {!isHomepage &&
         <Header siteTitle={title}/>
       }

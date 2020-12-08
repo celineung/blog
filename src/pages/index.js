@@ -10,7 +10,7 @@ export default function IndexPage({data, location}) {
   const cards = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location.pathname}>
+    <Layout location={location.pathname} pageTitle="Accueil">
       <div className="post-cards">
         {cards.map(({node: card}, index) => (
           <Link
