@@ -15,13 +15,16 @@ const Layout = ({ children, location }) => {
       }
     }
   `);
+  const title = data.site.siteMetadata.title;
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      {!isHomepage &&
+        <Header siteTitle={title}/>
+      }
       {isHomepage &&
         <div className="layout__banner">
-          <h1 className="layout-banner__title">Blog de Céline</h1>
+          <h1 className="layout-banner__title">{title}</h1>
           <div>tech &#8226; méthodologie &#8226; retour d'expérience</div>
         </div>
       }
