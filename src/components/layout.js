@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import SEO from "./seo";
 
 const Layout = ({ children, location }) => {
   const isHomepage = location === process.env.GATSBY_ROOT_URL;
@@ -19,6 +20,7 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
+      <SEO />
       {!isHomepage &&
         <Header siteTitle={title}/>
       }
