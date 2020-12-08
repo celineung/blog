@@ -3,6 +3,7 @@ title: "Différencier equals et hashcode"
 date: "2019-12-19"
 category: "JAVA"
 slug: "equals-vs-hashcode"
+illustration: "../images/posts/post_cards/coding_on_laptop.jpg"
 ---
 
 java.lang.Object possède une méthode equals() et une méthode hashcode(). Cet article abordera la différence entre ces deux méthodes et pourquoi les surcharger en Java.

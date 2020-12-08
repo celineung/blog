@@ -2,6 +2,10 @@
 
   a {
     text-decoration: none;
+
+    &:hover, &:focus {
+      background-color: #f4f5f7;
+    }
   }
 
   @include device-is('tablet') {
@@ -45,6 +49,7 @@
   &__date {
     @extend %date;
   }
+
 
   @include device-is('tablet') {
     padding: 30px 20px;

@@ -22,7 +22,7 @@ export default function IndexPage({data, location}) {
               date={card.frontmatter.date}
               category={card.frontmatter.category}
               excerpt={card.excerpt}
-              content={card.html}
+              gatsyImage={card.frontmatter.illustration.childImageSharp.fluid}
             ></PostCard>
           </Link>
         ))}
@@ -45,6 +45,13 @@ export const query = graphql`
               formatString: "DD MMMM YYYY"
               locale: "fr-FR"
             )
+            illustration {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             slug
             title
           }

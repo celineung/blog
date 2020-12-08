@@ -3,6 +3,7 @@ title: "Installation de Flutter sur MacOS"
 date: "2020-03-26"
 category: "FLUTTER"
 slug: "installation-de-flutter-sur-macos"
+illustration: "../images/posts/post_cards/hands_typing.jpg"
 ---
 
 Flutter est un framework de conception d'applications multiplateforme pour Android et ios. Cet article détaillera les étapes d'installations de Flutter sur Mac.
