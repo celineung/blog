@@ -1,5 +1,14 @@
 .header {
   background: $navbar;
-  color: white;
+  color: #ffffff;
   padding: 16px;
+
+  a {
+    color: #ffffff ;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

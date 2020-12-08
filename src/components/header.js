@@ -1,9 +1,14 @@
 import React from "react"
+import {Link} from "gatsby";
 
 export default function Header({ siteTitle }) {
   return (
     <header className="header">
-      { siteTitle }
+      <Link
+          to="/"
+      >
+        { siteTitle }
+      </Link>
     </header>
   )
 }
