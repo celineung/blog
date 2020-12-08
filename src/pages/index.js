@@ -12,10 +12,7 @@ export default function IndexPage({data, location}) {
 
   return (
     <Layout location={location.pathname}>
-      <SEO
-        lang="fr"
-        title="Blog - Céline Ung"
-      />
+      <SEO />
       <div className="post-cards">
         {cards.map(({node: card}, index) => (
           <Link
