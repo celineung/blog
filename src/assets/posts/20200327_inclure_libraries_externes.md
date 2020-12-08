@@ -3,6 +3,7 @@ title: "Inclure mes libraries externes à mes projets front"
 date: "2020-03-27"
 category: "JS"
 slug: "inclure-libraries-externes-personnelles"
+illustration: "../images/posts/post_cards/hands_writing_in_journal_at_the_table.jpg"
 ---
 
 J'ai récemment eu l'occasion de développer une librairie de composants, et je souhaiterais rendre les utilisables dans mes projets sans avoir à publier la librairie sur npm.

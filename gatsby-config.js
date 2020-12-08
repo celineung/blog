@@ -19,7 +19,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/gatsby-icon.png`,
       },
     },
     {
@@ -42,7 +42,6 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              pathPrefix: '/blog',
               maxWidth: 590,
             },
           },

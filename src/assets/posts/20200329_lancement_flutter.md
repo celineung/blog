@@ -3,6 +3,7 @@ title: "Lancement de ma première application Flutter sur mobile Android"
 date: "2020-03-29"
 category: "FLUTTER"
 slug: "lancement-de-flutter"
+illustration: "../images/posts/post_cards/hands_typing.jpg"
 ---
 
 Après avoir installé Flutter sur mon Macbook (https://celineungblog.wordpress.com/2020/03/26/installation-de-flutter-sur-mac/), la deuxième étape est de pouvoir lancer une application sur mon téléphone.
