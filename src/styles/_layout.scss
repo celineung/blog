@@ -35,3 +35,11 @@
     }
   }
 }
+
+footer {
+  margin-top: 50px;
+
+  @include device-is('desktop') {
+    margin-top: 70px;
+  }
+}

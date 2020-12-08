@@ -2,6 +2,7 @@
   background: $navbar;
   color: #ffffff;
   padding: 16px;
+  margin-bottom: 30px;
 
   a {
     color: #ffffff ;
@@ -10,5 +11,9 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @include device-is('tablet') {
+    margin-bottom: 50px;
   }
 }
