@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import PostCard from "../components/post-card"
 
 import { graphql } from "gatsby"
@@ -11,11 +10,7 @@ export default function IndexPage({data, location}) {
   const cards = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location.pathname}>
-      <SEO
-        lang="fr"
-        title="Blog - Céline Ung"
-      />
+    <Layout location={location.pathname} pageTitle="Accueil">
       <div className="post-cards">
         {cards.map(({node: card}, index) => (
           <Link

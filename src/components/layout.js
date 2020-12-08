@@ -3,8 +3,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import SEO from "./seo";
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, pageTitle }) => {
   const isHomepage = location === process.env.GATSBY_ROOT_URL;
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -15,13 +16,17 @@ const Layout = ({ children, location }) => {
       }
     }
   `);
+  const title = data.site.siteMetadata.title;
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <SEO pageTitle={pageTitle}/>
+      {!isHomepage &&
+        <Header siteTitle={title}/>
+      }
       {isHomepage &&
         <div className="layout__banner">
-          <h1 className="layout-banner__title">Blog de Céline</h1>
+          <h1 className="layout-banner__title">{title}</h1>
           <div>tech &#8226; méthodologie &#8226; retour d'expérience</div>
         </div>
       }

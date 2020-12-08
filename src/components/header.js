@@ -1,9 +1,9 @@
 import React from "react"
 
-export default function Header() {
+export default function Header({ siteTitle }) {
   return (
     <header className="header">
-      Céline Ung - blog
+      { siteTitle }
     </header>
   )
 }

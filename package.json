@@ -1,8 +1,8 @@
 {
   "name": "blog",
   "private": true,
-  "description": "Blog construit sur le starter de Gatsby `gatsby-starter-default`",
-  "version": "0.1.0",
+  "description": "Blog de Céline Ung",
+  "version": "1.0.0",
   "author": "Céline Ung",
   "dependencies": {
     "gatsby": "^2.26.1",

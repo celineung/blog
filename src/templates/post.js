@@ -7,7 +7,7 @@ export default function Post({ data }) {
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout>
+    <Layout pageTitle={ frontmatter.title }>
       <div className="post">
         <header className="post__header">
           <h1>{ frontmatter.title }</h1>
