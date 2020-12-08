@@ -2,6 +2,7 @@
 
   &__header {
     border-bottom: 1px solid rgb(228, 234, 237);
+    margin-bottom: 30px;
   }
 
   &__date {
@@ -25,6 +26,11 @@
   }
 
   @include device-is('tablet') {
+
+    &__header {
+      margin-bottom: 50px;
+    }
+
     .gatsby-resp-image-wrapper {
       margin: 50px 0;
     }
