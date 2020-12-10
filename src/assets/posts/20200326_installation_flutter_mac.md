@@ -59,13 +59,13 @@ La commande `flutter doctor` nous indique où télécharger Android Studio: "do
 
 Après l'avoir lancé, nous configurons l'IDE via le "Android Studio Setup Wizard" et nous finissons par arriver à l'écran suivant:
 
-![Android Studio > SDK Manager](../images/posts/20200326_installation_flutter_mac/sdk_manager.png)
+![interface Android Studio pour confirmer le SDK Manager](../images/posts/20200326_installation_flutter_mac/sdk_manager.png)
 
 Dans l'onglet "SDK Tools" de la nouvelle fenêtre qui s'ouvre, nous décochons "Hide Obsolet Packages" pour afficher voir s'afficher l'option **Android SDK Tools (Obsolete)**.
 
 A noter aussi où se trouve le SDK /Users/celine/Library/Android/sdk.
 
-![Android SDK Location](../images/posts/20200326_installation_flutter_mac/sdk_location.png)
+![interface Android Studio qui indique la localisation du SDK](../images/posts/20200326_installation_flutter_mac/sdk_location.png)
 
 Cette étape où nous devons spécifier un SDK antérieur à la dernière version est un problème connu de Flutter "This is a [known issue](https://github.com/flutter/flutter/issues/51712) that will be addressed in an upcoming version of Flutter".
 

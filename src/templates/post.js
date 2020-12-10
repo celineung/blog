@@ -3,18 +3,21 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout";
 
 export default function Post({ data }) {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark } = data;
+  const { frontmatter, html } = markdownRemark;
+  const postDate = frontmatter.date;
+  const dateTimeFormat = new Intl.DateTimeFormat('fr', { dateStyle: 'long' });
+  const formattedPostDate = dateTimeFormat.format(new Date(postDate));
 
   return (
     <Layout pageTitle={ frontmatter.title }>
-      <div className="post">
+      <article className="post">
         <header className="post__header">
           <h1>{ frontmatter.title }</h1>
-          <div className="post__date">{ frontmatter.date }</div>
+          <time dateTime={frontmatter.date} className="post__date">{ formattedPostDate }</time>
         </header>
-        <article className="post" dangerouslySetInnerHTML={{ __html: html }}></article>
-      </div>
+        <section className="post" dangerouslySetInnerHTML={{ __html: html }}></section>
+      </article>
     </Layout>
   )
 }
