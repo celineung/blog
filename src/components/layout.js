@@ -25,19 +25,17 @@ const Layout = ({ children, location, pageTitle }) => {
         <Header siteTitle={title}/>
       }
       {isHomepage &&
-        <div className="layout__banner">
+        <div className="layout__banner" role="banner">
           <h1 className="layout-banner__title">{title}</h1>
           <div>tech &#8226; méthodologie &#8226; retour d'expérience</div>
         </div>
       }
       <div className="layout__container">
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
       </div>
+      <footer>
+        <span>© {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.com">Gatsby</a></span>
+      </footer>
     </>
   );
 }
