@@ -33,9 +33,6 @@ const Layout = ({ children, location, pageTitle }) => {
       <div className="layout__container">
         <main>{children}</main>
       </div>
-      <footer>
-        <span>© {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.com">Gatsby</a></span>
-      </footer>
     </>
   );
 }

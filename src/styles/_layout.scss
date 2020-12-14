@@ -36,14 +36,3 @@
     }
   }
 }
-
-footer {
-  max-width: 960px;
-  margin: 30px auto;
-  display: flex;
-  justify-content: center;
-
-  @include device-is('desktop') {
-    margin: 70px auto 30px auto;
-  }
-}
