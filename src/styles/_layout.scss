@@ -25,9 +25,19 @@
   }
 }
 
+@include device-is('tablet') {
+  .layout__banner {
+    margin-bottom: 45px;
+  }
+}
+
 @include device-is('desktop') {
   .layout {
     height: 300px;
+
+    &__banner {
+      margin-bottom: 50px;
+    }
   }
 
   .layout-banner {

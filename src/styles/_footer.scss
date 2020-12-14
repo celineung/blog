@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  margin: 50px 0;
+  margin: 25px 0;
   font-size: 2rem;
 
   &__link {
@@ -10,5 +10,9 @@
     &:hover {
       color: $main-text;
     }
+  }
+
+  @include device-is('desktop') {
+    margin: 50px 0;
   }
 }
