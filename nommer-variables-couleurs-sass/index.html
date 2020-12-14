@@ -2,8 +2,7 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N66VJWP')</script><link as="script" rel="preload" href="/blog/webpack-runtime-470328bdce84092db30b.js"/><link as="script" rel="preload" href="/blog/styles-8fab2804fb6f85b824b6.js"/><link as="script" rel="preload" href="/blog/framework-d066f55745d479a55fde.js"/><link as="script" rel="preload" href="/blog/app-229189d3f9bae68bd569.js"/><link as="script" rel="preload" href="/blog/commons-a52cb1929a7406a0d4a7.js"/><link as="script" rel="preload" href="/blog/component---src-templates-post-js-3458a0334d603395afe3.js"/><link as="fetch" rel="preload" href="/blog/page-data/nommer-variables-couleurs-sass/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/63159454.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N66VJWP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="header"><a href="/blog/">Blog de Céline Ung</a></header><div class="layout__container"><main><article class="post"><header class="post__header"><h1>Nommer les variables de couleurs Sass</h1><time dateTime="2020-12-14" class="post__date">14 décembre 2020</time></header><section class="post"><h1>Nommer les variables de couleurs Sass</h1>
-<p>Extraire les couleurs dans des variables Sass permet de centraliser les couleurs utilisées et de faciliter leur réutilisation. Cela permet notamment d'avoir une palette de couleurs cibles pour le site et de ne pas s'en éloigner. Je préfère utiliser un unique fichier <code>colors.scss</code> pour retrouver mes variables facilement.</p>
+})(window,document,'script','dataLayer','GTM-N66VJWP')</script><link as="script" rel="preload" href="/blog/webpack-runtime-470328bdce84092db30b.js"/><link as="script" rel="preload" href="/blog/styles-8fab2804fb6f85b824b6.js"/><link as="script" rel="preload" href="/blog/framework-d066f55745d479a55fde.js"/><link as="script" rel="preload" href="/blog/app-229189d3f9bae68bd569.js"/><link as="script" rel="preload" href="/blog/commons-a52cb1929a7406a0d4a7.js"/><link as="script" rel="preload" href="/blog/component---src-templates-post-js-3458a0334d603395afe3.js"/><link as="fetch" rel="preload" href="/blog/page-data/nommer-variables-couleurs-sass/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/63159454.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N66VJWP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="header"><a href="/blog/">Blog de Céline Ung</a></header><div class="layout__container"><main><article class="post"><header class="post__header"><h1>Nommer les variables de couleurs Sass</h1><time dateTime="2020-12-14" class="post__date">14 décembre 2020</time></header><section class="post"><p>Extraire les couleurs dans des variables Sass permet de centraliser les couleurs utilisées et de faciliter leur réutilisation. Cela permet notamment d'avoir une palette de couleurs cibles pour le site et de ne pas s'en éloigner. Je préfère utiliser un unique fichier <code>colors.scss</code> pour retrouver mes variables facilement.</p>
 <p>Au fur et à mesure que les couleurs sont recensées, ce fichier grossit et finit par ne plus ressembler à rien, avec de nombreuses couleurs éparpillées dans tous les sens. Il est impossible de s'y retrouver:</p>
 <pre><code class="language-scss">$success: #57C884;
 $grey: #FAFBFC;
@@ -23,7 +22,7 @@ $grey-30: #7A869A;
 color: darken($grey-1, 10%);
 </code></pre>
 <p><strong>avantage</strong>: La couleur est indiquée dès la lecture de la variable.</p>
-<p><strong>problèmes:</strong> Comment gérer la suppression de variable? <code>$grey-20</code>par exemple? Faudra-t-il décaler la numérotation? Aussi, que représente <code>$grey-20</code>? Est-ce la couleur du menu ou du bouton déjà? ...</p>
+<p><strong>problème:</strong> Comment gérer la suppression de variable? <code>$grey-20</code>par exemple? Faudra-t-il décaler la numérotation? Aussi, que représente <code>$grey-20</code>? Est-ce la couleur du menu ou du bouton déjà? ...</p>
 <h2>Utiliser un nom de couleur unique</h2>
 <p>J'ai aussi découvert que d'autres préfèrent générer un nom unique à toutes leurs variables, par exemple à l'aide de ce site <a href="https://chir.ag/projects/name-that-color">Name that color</a>. Ce qui donne:</p>
 <pre><code class="language-scss">$tropical-blue: #CCDDFA;
@@ -31,7 +30,7 @@ $jordy-blue: #8BB2F4;
 $cornflower-blue: #6195ED;
 </code></pre>
 <p><strong>avantage</strong>: La couleur est indiquée dès la lecture de la variable.</p>
-<p><strong>problèmes:</strong> Comme dans le cas précédent où les noms de variables sont numérotés, nous perdons ici le contexte d'utilisation de la variable.</p>
+<p><strong>problème:</strong> Comme dans le cas précédent où les noms de variables sont numérotés, nous perdons ici le contexte d'utilisation de la variable.</p>
 <h2>Indiquer la fonctionnalité de la variable</h2>
 <p>Dans beaucoup de projets, la fonctionnalité de la variable est indiqué dans son nom:</p>
 <pre><code class="language-scss">$error: #FF4B00;
@@ -39,7 +38,7 @@ $success: #57C884;
 $warning: #FFBE00;
 </code></pre>
 <p><strong>avantage</strong>: La fonctionnalité est indiquée dès la lecture de la variable...</p>
-<p><strong>problèmes:</strong> ...mais nous perdons de vue la couleur derrière ce nommage.</p>
+<p><strong>problème:</strong> ...mais nous perdons de vue la couleur derrière ce nommage.</p>
 <h2>Ma préférence</h2>
 <p>Combiner les propositions précédentes:</p>
 <ul>
