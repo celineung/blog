@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/blog`,
   siteMetadata: {
     title: "Blog de Céline Ung",
-    description: "Blog de Céline Ung",
+    description: "A travers ce blog, je souhaite partager mes découvertes et mes connaissances en tant que développeuse. J'écrirai des articles le design, sur Git, sur du JS, sur du JAVA, sur les pratiques de développement, sur des scrum etc.",
     author: `@celineung`,
     siteUrl: `https://celineung.github.io/blog`,
   },

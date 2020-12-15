@@ -6,7 +6,7 @@ import Header from "./header"
 import Footer from "./footer"
 import SEO from "./seo";
 
-const Layout = ({ children, location, pageTitle }) => {
+const Layout = ({ children, location, pageTitle, image, pathname, description }) => {
   const isHomepage = location === process.env.GATSBY_ROOT_URL;
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -21,7 +21,7 @@ const Layout = ({ children, location, pageTitle }) => {
 
   return (
     <>
-      <SEO pageTitle={pageTitle}/>
+      <SEO pageTitle={pageTitle} image={image} pathname={pathname} description={description}/>
       {!isHomepage &&
         <Header siteTitle={title}/>
       }

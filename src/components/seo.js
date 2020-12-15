@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const defaultLang = "fr";
 
-function SEO({ description, lang = defaultLang, meta, pageTitle }) {
+function SEO({ description, lang = defaultLang, meta, pageTitle, image: metaImage, pathname }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,15 +21,22 @@ function SEO({ description, lang = defaultLang, meta, pageTitle }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
     `
   );
 
+
   const metaDescription = description || site.siteMetadata.description;
   const titleSuffix = `| ${site.siteMetadata.title}`;
   const defaultTitle = `${pageTitle} ${titleSuffix}`;
+  const image =
+    metaImage && metaImage.src
+      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      : `${site.siteMetadata.siteUrl}/images/coding_on_laptop.jpg`;
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
 
   return (
     <Helmet
@@ -38,6 +45,16 @@ function SEO({ description, lang = defaultLang, meta, pageTitle }) {
       }}
       title={defaultTitle}
       titleTemplate={defaultTitle}
+      link={
+        canonical
+          ? [
+            {
+              rel: "canonical",
+              href: canonical,
+            },
+          ]
+          : []
+      }
       meta={[
         {
           name: `description`,
@@ -71,7 +88,25 @@ function SEO({ description, lang = defaultLang, meta, pageTitle }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(
+        image
+          ? [
+            {
+              property: "og:image",
+              content: image,
+            },
+            {
+              name: "twitter:card",
+              content: "summary_large_image",
+            },
+          ]
+          : [
+            {
+              name: "twitter:card",
+              content: "summary",
+            },
+          ]
+      ).concat(meta)}
     />
   )
 }
@@ -79,7 +114,6 @@ function SEO({ description, lang = defaultLang, meta, pageTitle }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
 };
 
 SEO.propTypes = {
@@ -87,6 +121,12 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string,
+  image: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+  }),
+  canonical: PropTypes.string,
 };
 
 export default SEO;
