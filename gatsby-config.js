@@ -2,8 +2,9 @@ module.exports = {
   pathPrefix: `/blog`,
   siteMetadata: {
     title: "Blog de Céline Ung",
-    description: "Blog de Céline Ung",
+    description: "A travers ce blog, je souhaite partager mes découvertes et mes connaissances en tant que développeuse. J'écrirai des articles le design, sur Git, sur du JS, sur du JAVA, sur les pratiques de développement, sur des scrum etc.",
     author: `@celineung`,
+    siteUrl: `https://celineung.github.io/blog`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,6 +12,19 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        exclude: [`/404`]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
