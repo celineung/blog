@@ -6,7 +6,7 @@ slug: "inclure-libraries-externes-personnelles"
 illustration: "../images/posts/post_cards/hands_writing_in_journal_at_the_table.jpg"
 ---
 
-J'ai récemment eu l'occasion de développer une librairie de composants, et je souhaiterais rendre les utilisables dans mes projets sans avoir à publier la librairie sur npm.
+J'ai récemment eu l'occasion de développer une librairie de composants, et je souhaiterais rendre les utilisables dans mes projets **sans avoir à publier la librairie sur npm**.
 
 La structure de mon projet se présente de cette façon:
 
@@ -36,7 +36,7 @@ La solution la plus simple pour l'exemple étudié ici serait de spécifier dire
 }
 ```
 
-Il suffit ensuite de faire un npm install, et tadaaaa ! On voit apparaître le dossier pix-ui dans le node_modules de project1.
+Il suffit ensuite de faire un npm install ! On voit apparaître le dossier pix-ui dans le node_modules de project1.
 
 ##npm link
 
@@ -133,3 +133,5 @@ Si j'avait mis les deux dans des repos séparés, il aurait suffit de modifier l
   "ui-components": "github:username/ui-components#my-branch-name" 
 }
 ```
+
+Il suffit ensuite de lancer `npm install` et la dépendance sera utilisable!
