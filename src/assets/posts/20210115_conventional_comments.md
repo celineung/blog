@@ -6,22 +6,18 @@ slug: "conventional-comments"
 illustration: "../images/posts/post_cards/good-vibes-sign-flatlay.jpg"
 ---
 
-## Des revues de code effectives avec les conventional comments
+Il y a quelques temps, j'ai eu l'occasion de m'essayer au [conventional comments](https://conventionalcomments.org/) lors des revues de code. Depuis, j'ai adopté la pratique: les actions attendues suite à un commentaire sur un bout de code sont devenues plus claires.
 
-Il y a quelques temps, j'ai eu l'occasion de m'essayer au [*conventional comments*](https://conventionalcomments.org/) lors des revues de code. Depuis, j'ai adopté la pratique: les actions attendues suite à un commentaire sur un bout de code sont devenues plus claires.
+J'aborderai dans un premier temps dans cet article pourquoi je trouve les revues de code importantes, puis comment j'exprime mon intention derrière une revue de code via les *conventional comments*.
 
-J'aborderai dans un premier temps dans cet article pourquoi je trouve les revues de code importantes, puis comment j'exprime mon intention derrière une revue de code via les [*conventional comments*](https://conventionalcomments.org/).
-
-
-
-### Pulls requests: l'union fait la force
+## Pulls requests: l'union fait la force
 
 Au cours de mes missions, j'ai croisé plusieurs façon d'intégrer du nouveau code dans la base de code commune. Dans le pire des cas, les nouveaux développements peuvent soient:
 
 - être directement mergés dans la branche de travail principale
 - ou bien être mergés après validation de collègues qui ne leur ont pas accordé ni l'attention ni le temps nécéssaire
 
-> Attention, si vous codez sans pensez à votre relecteur (grand nombre de fichiers, inclusion de nouvelles fonctionnalités hors-scope, refactorisation tunnel qui peuvent être faits à postériori, etc), vous comprendrez que la revue de code ne sera pas simple! Pensez à faire des commits atomiques, avec des noms de commits parlant (cf: conventionnal commit) et un enchaînement de commits qui traduit votre chemin de pensée.
+> Attention, si vous codez sans pensez à votre relecteur (grand nombre de fichiers, inclusion de nouvelles fonctionnalités hors-scope, refactorisation tunnel qui peuvent être faits à postériori, etc), vous comprendrez que la revue de code ne sera pas simple! Pensez à faire des commits atomiques, avec des noms de commits parlant (cf: [comment écrire un message de commit Git](https://celineung.github.io/blog/message-de-commit-git)) et un enchaînement de commits qui traduit votre chemin de pensée.
 
 Certaines personnes pensent que les revues de code ne sont pas nécessaires et sont une perte de temps.
 
@@ -31,11 +27,11 @@ Les revues de code permettent d'augmenter la qualité du code et de s'assurer qu
 
 Exemple de revue sur la [Pull Request #40303 de Angular](https://github.com/angular/angular/pull/40303):
 
-![Example de code revue contenant une suggestion de modification et des réponses de deux autres personnes approuvant cette modification](../images/posts/20210115_conventional_comments/code_review_example.png)
+![Example de code revue contenant une suggestion de modification](../images/posts/20210115_conventional_comments/code_review_example.png)
 
 
 
-### Transmettre son intention lors d'une revue de code
+## Transmettre son intention lors d'une revue de code
 
 Imaginons que nous avons à présent développé une nouvelle fonctionnalité prête à être mergée et nos collègues ont commencé à faire de la revue dessus.
 
@@ -49,11 +45,11 @@ Chacun de ces commentaires sont pertinents. Mais que faut-il vraiment modifier d
 
 Qu'est-ce qui est vraiment bloquant? Le commentateur demande-t-il des explications sur le choix du background-color ou est-il est désaccord avec ce choix? La variable `rdn` étant utilisée ailleurs, le commentateur demande-il ici de renommer la variable dans tout le code ou simplement dans la fonction concernée? La suppression de la librairie dépréciée doit-elle être faite dans cette Pull Request ou bien peut-elle être faite plus tard?
 
-La pratique [*conventional comments*](https://conventionalcomments.org/) préconise de préfixer le commentaire par un mot-clé.
+La pratique [conventional comments](https://conventionalcomments.org/) préconise de préfixer le commentaire par un mot-clé.
 
 En reprenant l'exemple précédent:
 
-- **question: **Pourquoi mettre le background-color à #F4F5F7? Était-ce dans la maquette?
+- **question:** Pourquoi mettre le background-color à #F4F5F7? Était-ce dans la maquette?
 - **suggestion:** Pourquoi mettre le background-color à #F4F5F7? Je trouve que #FAFBFC propose un meilleur contraste.
 
 Je reprends la [documentation officielle de conventional comment pour indiquer les mots-clés suggérés](https://conventionalcomments.org/):
