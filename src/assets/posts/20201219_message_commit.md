@@ -1,5 +1,5 @@
 ---
-title: "Message de commit Git"
+title: "Écrire un message de commit"
 date: "2020-12-19"
 category: "GIT"
 slug: "message-de-commit-git"
@@ -61,9 +61,9 @@ Pourquoi ajouter de la ponctuation lorsque l'on tente déjà de limiter le nombr
 
 ### Commencer par un verbe à l'impératif
 
-Préférer `Fix button style in IE9` à `Fixed IE9 button display`/ `Some IE9 button display`car le commit explique ce que le commit apporte (et non pas ce qu'il a apporté).
+Préférer `Fix button style in IE9` à `Fixed IE9 button display`/ `Some IE9 button display` car le commit explique ce que le commit apporte (et non pas ce qu'il a apporté).
 
-Un commit doit pouvoir compléter la phrase suivante:  **If aplied, this commit will <u>[commit name]</u>**
+Un commit doit pouvoir compléter la phrase suivante:  **If applied, this commit will <u>[commit name]</u>**
 
 Par exemple:
 
