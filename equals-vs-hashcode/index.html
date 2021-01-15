@@ -453,14 +453,14 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N66VJWP')</script><link as="script" rel="preload" href="/blog/webpack-runtime-5a9ede49c755fd7f271e.js"/><link as="script" rel="preload" href="/blog/framework-5e01c8af6b1735c9eaa3.js"/><link as="script" rel="preload" href="/blog/styles-bc72ca78f9bad9fb1f45.js"/><link as="script" rel="preload" href="/blog/app-eaf409e644976336f742.js"/><link as="script" rel="preload" href="/blog/a9a7754c-e28d5aa04493f4279687.js"/><link as="script" rel="preload" href="/blog/commons-48cdc2edbe75afc4b00d.js"/><link as="script" rel="preload" href="/blog/component---src-templates-post-js-a0c079721a95ea1dc810.js"/><link as="fetch" rel="preload" href="/blog/page-data/equals-vs-hashcode/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/764694655.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N66VJWP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="header"><a href="/blog/">Blog de Céline Ung</a></header><div class="layout__container"><main><article class="post"><header class="post__header"><h1>Différencier equals et hashcode</h1><time dateTime="2019-12-19" class="post__date">19 décembre 2019</time></header><section class="post"><p>java.lang.Object possède une méthode equals() et une méthode hashcode(). Cet article abordera la différence entre ces deux méthodes et pourquoi les surcharger en Java.</p>
+})(window,document,'script','dataLayer','GTM-N66VJWP')</script><link as="script" rel="preload" href="/blog/webpack-runtime-5a9ede49c755fd7f271e.js"/><link as="script" rel="preload" href="/blog/framework-5e01c8af6b1735c9eaa3.js"/><link as="script" rel="preload" href="/blog/styles-bc72ca78f9bad9fb1f45.js"/><link as="script" rel="preload" href="/blog/app-eaf409e644976336f742.js"/><link as="script" rel="preload" href="/blog/a9a7754c-e28d5aa04493f4279687.js"/><link as="script" rel="preload" href="/blog/commons-48cdc2edbe75afc4b00d.js"/><link as="script" rel="preload" href="/blog/component---src-templates-post-js-a0c079721a95ea1dc810.js"/><link as="fetch" rel="preload" href="/blog/page-data/equals-vs-hashcode/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/764694655.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N66VJWP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="header"><a href="/blog/">Blog de Céline Ung</a></header><div class="layout__container"><main><article class="post"><header class="post__header"><h1>Différencier equals et hashcode</h1><time dateTime="2019-12-19" class="post__date">December 19, 2019</time></header><section class="post"><p>java.lang.Object possède une méthode equals() et une méthode hashcode(). Cet article abordera la différence entre ces deux méthodes et pourquoi les surcharger en Java.</p>
 <h2>equals</h2>
 <p>Cette méthode vérifie si deux objets sont égaux en utilisant "==", c'est-à-dire qu'elle vérifie si deux objets ont la même référence:</p>
 <pre><code class="language-java">public boolean equals(Object obj) {
     return (this == obj);
 }
 </code></pre>
-<p>Par conséquent, deux objets ayant les mêmes propriétés seront seulement égales si l'on fait appel à la méthode equals():</p>
+<p>Par conséquent, deux objets ayant les mêmes propriétés ne seront pas égaux si l'on fait simplement appel à la méthode equals() sans l'overrider:</p>
 <pre><code class="language-java">@Test
 public void shouldVerifyInequalityOfObjectsWithEquals() {
     Car car1 = Car.builder()
@@ -491,9 +491,11 @@ public void shouldVerifyInequalityOfObjectsWithHashcode() {
 }
 </code></pre>
 <p>La méthode hashcode doit suivre le contrat suivant (spécifié dans la Javadoc):</p>
-<p>chaque fois qu'elle est appelée sur un même objet, elle devra retourner la même valeur si aucune de ses propriétés n'a été modifiée
-si deux objets sont égaux via la méthode equals(), alors l'appel à hashcode() sur chacun de ces deux objets doit retourner la même valeur entière
-il n'est pas obligatoire d'avoir deux hashcode distincts pour deux objets inégaux via equals()</p>
+<ul>
+<li>chaque fois qu'elle est appelée sur un même objet, elle devra retourner la même valeur si aucune de ses propriétés n'a été modifiée</li>
+<li>si deux objets sont égaux via la méthode equals(), alors l'appel à hashcode() sur chacun de ces deux objets doit retourner la même valeur entière</li>
+<li>il n'est pas obligatoire d'avoir deux hashcode distincts pour deux objets inégaux via equals()</li>
+</ul>
 <p>A remarquer que deux objets ayant le même hashcode ne sont pas nécessairement égaux via equals().</p>
 <h2>surcharger equals</h2>
 <p>Surcharger la méthode equals permet de changer le comportement de la méthode, afin de distinguer l'égalité objet de l'égalité fonctionnelle.</p>
@@ -501,8 +503,8 @@ il n'est pas obligatoire d'avoir deux hashcode distincts pour deux objets inéga
 <pre><code class="language-java">@Override
 public boolean equals(Object obj) {
     boolean functionalEquality = false;
-    Car address = (Car) obj;
-    if(address.licensePlate == this.licensePlate) {
+    Car car = (Car) obj;
+    if(car.licensePlate == this.licensePlate) {
         functionalEquality = true;
     }
     return functionalEquality;
