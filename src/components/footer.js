@@ -11,13 +11,15 @@ export default function Footer() {
         to="https://github.com/celineung/blog"
         className="footer__link"
       >
-        <FontAwesomeIcon icon={faGithub} />
+        <FontAwesomeIcon icon={faGithub} aria-hidden="true"/>
+        <span className="footer-link__text">Github</span>
       </Link>
       <Link
         to="https://linkedin.com/in/celine-ung"
         className="footer__link"
       >
-        <FontAwesomeIcon icon={faLinkedin} />
+        <FontAwesomeIcon icon={faLinkedin} aria-hidden="true"/>
+        <span className="footer-link__text">LinkedIn</span>
       </Link>
     </footer>
   )
