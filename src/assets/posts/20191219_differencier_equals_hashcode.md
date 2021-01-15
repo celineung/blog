@@ -18,7 +18,7 @@ public boolean equals(Object obj) {
 }
 ```
 
-Par conséquent, deux objets ayant les mêmes propriétés seront seulement égales si l'on fait appel à la méthode equals():
+Par conséquent, deux objets ayant les mêmes propriétés ne seront pas égaux si l'on fait simplement appel à la méthode equals() sans l'overrider:
 
 ```java
 @Test
@@ -57,9 +57,9 @@ public void shouldVerifyInequalityOfObjectsWithHashcode() {
 
 La méthode hashcode doit suivre le contrat suivant (spécifié dans la Javadoc):
 
-chaque fois qu'elle est appelée sur un même objet, elle devra retourner la même valeur si aucune de ses propriétés n'a été modifiée
-si deux objets sont égaux via la méthode equals(), alors l'appel à hashcode() sur chacun de ces deux objets doit retourner la même valeur entière
-il n'est pas obligatoire d'avoir deux hashcode distincts pour deux objets inégaux via equals()
+- chaque fois qu'elle est appelée sur un même objet, elle devra retourner la même valeur si aucune de ses propriétés n'a été modifiée
+- si deux objets sont égaux via la méthode equals(), alors l'appel à hashcode() sur chacun de ces deux objets doit retourner la même valeur entière
+- il n'est pas obligatoire d'avoir deux hashcode distincts pour deux objets inégaux via equals()
 
 A remarquer que deux objets ayant le même hashcode ne sont pas nécessairement égaux via equals().
 
@@ -73,8 +73,8 @@ Considérons un objet de type Car. Nous souhaitons que deux voitures de même pl
 @Override
 public boolean equals(Object obj) {
     boolean functionalEquality = false;
-    Car address = (Car) obj;
-    if(address.licensePlate == this.licensePlate) {
+    Car car = (Car) obj;
+    if(car.licensePlate == this.licensePlate) {
         functionalEquality = true;
     }
     return functionalEquality;
@@ -103,7 +103,7 @@ Lorsque equals ou hashcode est surchargé, alors les deux doivent l'être.
 
 equals() vérifie si deux objets ont la même identité, et par défaut hashcode retourne un entier en se basant sur cette identité.
 
-Si deux objets n'ont pas le même hashcode => alors sûrement ces deux objets ne sont pas égaux via equals().
+Si deux objets n'ont pas le même hashcode → alors sûrement ces deux objets ne sont pas égaux via equals().
 
 Surcharger l'un sans l'autre peut conduire à des comportements non souhaité :
 
