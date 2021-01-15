@@ -527,7 +527,7 @@ public void shouldVerifyInequalityOfObjectsWithEquals() {
 <h2>surcharger hashcode</h2>
 <p>Lorsque equals ou hashcode est surchargé, alors les deux doivent l'être.</p>
 <p>equals() vérifie si deux objets ont la même identité, et par défaut hashcode retourne un entier en se basant sur cette identité.</p>
-<p>Si deux objets n'ont pas le même hashcode => alors sûrement ces deux objets ne sont pas égaux via equals().</p>
+<p>Si deux objets n'ont pas le même hashcode → alors sûrement ces deux objets ne sont pas égaux via equals().</p>
 <p>Surcharger l'un sans l'autre peut conduire à des comportements non souhaité :</p>
 <pre><code class="language-java">@Test
 public void shouldShowOverridingEqualsNeedsOverrideHashcode() {
