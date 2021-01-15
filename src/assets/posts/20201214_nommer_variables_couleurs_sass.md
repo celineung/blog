@@ -32,11 +32,16 @@ $grey-20: #8993A4;
 $grey-30: #7A869A;
 ```
 
-En essayant de limiter le nombre de couleurs déclarées, lorsque la couleur utilisée est ponctuelle, nous avons préféré utilisé les fonctions Sass `darken`and `lighten`:
+En essayant de limiter le nombre de couleurs déclarées, lorsque la couleur utilisée est ponctuelle, nous avons préféré utilisé les fonctions Sass `darken` and `lighten`:
 
 ```scss
-color: lighten($grey-1, 10%);
-color: darken($grey-1, 10%);
+.my-class {
+  color: lighten($grey-1, 10%);
+}
+
+.another-class {
+  color: darken($grey-1, 10%);
+}
 ```
 
 **avantage**: La couleur est indiquée dès la lecture de la variable.
@@ -104,5 +109,5 @@ Si plusieurs éléments ont la même couleur, il suffit de créer une nouvelle e
 
 Attention, si le nombre de couleurs est trop important il faudrait le signaler au designer. Est-ce que le style guide du site est bien défini ? S'éloigne-t-on de l'image de la marque ?
 
-Il y a sûrement mieux pour nommer les variables de couleurs.  
-Je ne manquerai pas de compléter cet article quand je trouverai mieux.
+Cette solution de nommage de couleurs est une solution parmi d'autres.  
+Je ne prétends pas avoir trouvé la meilleure astuce, mais elle me semble satisfaisante pour le moment.
