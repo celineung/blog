@@ -1,0 +1,26 @@
+.post-cards {
+
+  &__categories {
+
+  }
+
+  &__main {
+    a {
+      text-decoration: none;
+
+      &:hover, &:focus {
+        background-color: #f4f5f7;
+      }
+    }
+
+    @include device-is('tablet') {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include device-is('desktop') {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+}
