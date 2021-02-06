@@ -2,7 +2,7 @@ import React from "react";
 import {  Link } from "gatsby";
 
 import { sortBy, uniqBy } from 'lodash';
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faSortDown, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import PostCard from "./post-card";
@@ -14,7 +14,8 @@ export default class App extends React.Component {
     this.state = {
       categories: [],
       cards: this.props.cards,
-      displayedCards: this.props.cards
+      displayedCards: this.props.cards,
+      openedFilterZone: false
     };
   }
 
@@ -62,20 +63,35 @@ export default class App extends React.Component {
     this.setState({ displayedCards: updatedCards });
   }
 
+  toggleFilterZone() {
+    this.setState((state) => ({ openedFilterZone: !state.openedFilterZone }));
+  }
+
   render() {
     return (
       <div className="post-cards">
         <div className="post-cards__categories">
-          {this.state.categories.map((category) => (
-             <button key={category.name}
-                     type="button"
-                     onClick={() => this.selectCategory(category.name)}
-                     aria-pressed={category.selected}
-                     className={`post-cards-categories__category post-cards-categories__category--${category.selected ? "selected" : "no-selected"}`}>
-               <span>{category.name}</span>
-               { category.selected && <FontAwesomeIcon icon={faTimes} aria-hidden="true"/> }
-             </button>
-          ))}
+          <button type="button"
+                  className="post-cards-categories__button"
+                  aria-pressed={this.state.openedFilterZone}
+                  onClick={() => this.toggleFilterZone()}>
+            Filtrer par catégorie
+            <FontAwesomeIcon icon={faSortDown} aria-hidden="true"/>
+          </button>
+          { this.state.openedFilterZone &&
+            <div>
+              {this.state.categories.map((category) => (
+                <button key={category.name}
+                        type="button"
+                        onClick={() => this.selectCategory(category.name)}
+                        aria-pressed={category.selected}
+                        className={`post-cards-categories__category post-cards-categories__category--${category.selected ? "selected" : "no-selected"}`}>
+                  <span>{category.name}</span>
+                  { category.selected && <FontAwesomeIcon icon={faTimes} aria-hidden="true"/> }
+                </button>
+              ))}
+            </div>
+          }
         </div>
         <div className="post-cards__main">
           {this.state.displayedCards.map((card) => (

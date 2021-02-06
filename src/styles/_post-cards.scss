@@ -1,10 +1,12 @@
 .post-cards {
 
   &__categories {
-    margin: 100px 0 50px 0;
+    padding: 40px 0 30px 0;
+    width: 100%;
+    text-align: right;
 
     @include device-is('tablet') {
-      margin: 100px 15px 50px 15px;
+      padding: 40px 15px 30px 15px;
     }
   }
 
@@ -30,13 +32,24 @@
 
 .post-cards-categories {
 
+  &__button {
+    margin: 0 5px 10px 5px;
+    background-color: transparent;
+    border: none;
+    color: $main-text;
+
+    svg {
+      margin-left: 10px;
+      vertical-align: baseline;
+    }
+  }
+
   &__category {
     margin: 5px 5px;
     text-transform: lowercase;
     background-color: transparent;
     border: 1px solid $label;
     border-radius: 5px;
-    cursor: pointer;
     padding: 5px 10px;
 
     &--selected {
@@ -46,10 +59,6 @@
       span {
         padding-right: 10px;;
       }
-    }
-
-    &--not-selected {
-
     }
   }
 }
