@@ -1,35 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout"
-import PostCard from "../components/post-card"
-
-import { graphql } from "gatsby"
+import PostCards from "../components/post-cards";
 
 export default function IndexPage({data, location}) {
-  const cards = data.allMarkdownRemark.edges;
+
+  const cards = data.allMarkdownRemark.edges.map((card) => card.node);
 
   return (
     <Layout
       location={location.pathname}
       pageTitle="Accueil"
       pathname="/">
-      <div className="post-cards">
-        {cards.map(({node: card}, index) => (
-          <Link
-            to={card.frontmatter.slug}
-            key={index}
-          >
-            <PostCard
-              title={card.frontmatter.title}
-              date={card.frontmatter.date}
-              category={card.frontmatter.category}
-              excerpt={card.excerpt}
-              gatsyImage={card.frontmatter.illustration.childImageSharp.fluid}
-            ></PostCard>
-          </Link>
-        ))}
-      </div>
+      <PostCards cards={cards}/>
     </Layout>
   )
 }
@@ -61,4 +45,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

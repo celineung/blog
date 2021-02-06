@@ -1,6 +1,7 @@
 @import "colors";
 @import "mixins";
 @import "header";
+@import "post-cards";
 @import "post-card";
 @import "post";
 @import "layout";
@@ -27,4 +28,8 @@ h1, h2, h3 {
       font-size: 0.85rem;
     }
   }
+}
+
+button {
+  cursor: pointer;
 }
