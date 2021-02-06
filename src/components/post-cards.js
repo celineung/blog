@@ -13,7 +13,8 @@ export default class App extends React.Component {
 
     this.state = {
       categories: [],
-      cards: this.props.cards
+      cards: this.props.cards,
+      displayedCards: this.props.cards
     };
   }
 
@@ -37,7 +38,29 @@ export default class App extends React.Component {
       return category;
     });
     this.setState({ categories: updatedCategories });
+    const selectedCategories = this.getSelectedCategoryNames();
+    this.filterCardsByCategories(selectedCategories)
   };
+
+  getSelectedCategoryNames() {
+    let selectedCategoriesNames = this.state.categories
+      .filter((category) => category.selected)
+      .map((category) => category.name);
+
+    if(selectedCategoriesNames.length === 0) {
+      selectedCategoriesNames = this.state.categories
+        .map((category) => category.name);
+    }
+  
+    return selectedCategoriesNames;
+  }
+
+  filterCardsByCategories(categories) {
+    const updatedCards = this.state.cards.filter((card) => {
+      return categories.includes(card.frontmatter.category);
+    });
+    this.setState({ displayedCards: updatedCards });
+  }
 
   render() {
     return (
@@ -55,7 +78,7 @@ export default class App extends React.Component {
           ))}
         </div>
         <div className="post-cards__main">
-          {this.state.cards.map((card) => (
+          {this.state.displayedCards.map((card) => (
             <Link
               key={card.frontmatter.slug}
               to={card.frontmatter.slug}
