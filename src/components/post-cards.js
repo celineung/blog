@@ -1,65 +1,76 @@
 import React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import {  Link } from "gatsby";
+
+import { sortBy, uniqBy } from 'lodash';
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import PostCard from "./post-card";
-import { sortBy, uniq } from 'lodash';
 
-export default function PostCards() {
-  const data = useStaticQuery(graphql`
-    query PostsQuery {
-      allMarkdownRemark (
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            frontmatter {
-              category
-              date
-              illustration {
-                childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-              slug
-              title
-            }
-            excerpt
-            html
-          }
-        }
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      categories: [],
+      cards: this.props.cards
+    };
+  }
+
+  componentDidMount() {
+    const sortedCards = sortBy(this.state.cards, (card) => card.frontmatter.category);
+    const categories = uniqBy(sortedCards.map((card) => {
+      return {
+        name: card.frontmatter.category,
+        selected: false
       }
-    }
-  `);
-  const cards = data.allMarkdownRemark.edges;
-  const sortedCards = sortBy(cards, (card) => card.node.frontmatter.category);
+    }), 'name');
 
-  const sortedCategories = uniq(sortedCards.map(({node: card}) => card.frontmatter.category));
+    this.setState({ categories: categories });
+  };
 
-  return (
-    <div className="post-cards">
-      <div className="post-cards__categories">
-        {sortedCategories.map((category) => (
-           <button key={category} type="button">{category}</button>
-        ))}
+  selectCategory = (categoryToUpdate) => {
+    const updatedCategories = this.state.categories.map((category) => {
+      if (category.name === categoryToUpdate) {
+        category.selected = !category.selected;
+      }
+      return category;
+    });
+    this.setState({ categories: updatedCategories });
+  };
+
+  render() {
+    return (
+      <div className="post-cards">
+        <div className="post-cards__categories">
+          {this.state.categories.map((category) => (
+             <button key={category.name}
+                     type="button"
+                     onClick={() => this.selectCategory(category.name)}
+                     aria-pressed={category.selected}
+                     className={`post-cards-categories__category post-cards-categories__category--${category.selected ? "selected" : "no-selected"}`}>
+               <span>{category.name}</span>
+               { category.selected && <FontAwesomeIcon icon={faTimes} aria-hidden="true"/> }
+             </button>
+          ))}
+        </div>
+        <div className="post-cards__main">
+          {this.state.cards.map((card) => (
+            <Link
+              key={card.frontmatter.slug}
+              to={card.frontmatter.slug}
+            >
+              <PostCard
+                title={card.frontmatter.title}
+                date={card.frontmatter.date}
+                category={card.frontmatter.category}
+                excerpt={card.excerpt}
+                gatsyImage={card.frontmatter.illustration.childImageSharp.fluid}
+              />
+            </Link>
+          ))}
+        </div>
       </div>
-      <div className="post-cards__main">
-        {cards.map(({node: card}) => (
-          <Link
-            key={card.frontmatter.slug}
-            to={card.frontmatter.slug}
-          >
-            <PostCard
-              title={card.frontmatter.title}
-              date={card.frontmatter.date}
-              category={card.frontmatter.category}
-              excerpt={card.excerpt}
-              gatsyImage={card.frontmatter.illustration.childImageSharp.fluid}
-            />
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
+    );
+  }
 }
