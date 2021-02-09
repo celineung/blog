@@ -1,0 +1,22 @@
+name: Autodeploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  autodeploy:
+    name: Deploy on merge
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          GATSBY_ROOT_URL=/blog/ npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          branch: gh-pages
+          folder: public
