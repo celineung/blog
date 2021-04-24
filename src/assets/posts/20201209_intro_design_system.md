@@ -46,7 +46,7 @@ Nous nous sommes orientés vers ZeroHeight pour mettre en place ce style guide:
 
 ![interface ZeroHeight](../images/posts/20201209_intro_design_system/20201209_zeroheight.png)
 
-Cette image est tirée du [Storybook de Pix]([1024pix.github.io/pix-ui/](https://1024pix.github.io/pix-ui/)).
+Cette image est tirée du [Storybook de Pix](https://1024pix.github.io/pix-ui/).
 
 
 La **bibliothèque de référence** contient des éléments réutilisables: maquettes, fichiers Astract/Sketch/etc, bout de code... 

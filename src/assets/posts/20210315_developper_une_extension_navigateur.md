@@ -60,7 +60,7 @@ Et voilà! L'icône de notre addon s'affiche sur notre navigateur:
 
 ![Affichage de l'addon sur Chrome](../images/posts/20210315_browser_addon/chrome_addon_display.png)
 
-En cliquant sur l'addon, un petit carré blanc s'affiche: notre popup est ne contient rien pour l'instant.
+En cliquant sur l'addon, un petit carré blanc s'affiche: c'est normal, notre popup ne contient rien pour l'instant.
 
 > Si l'extension ne s'affiche comme si l'image précédente, vous avez sûrement besoin de la fixer. Pour cela, cliquez sur l'icon de l'extension en forme de puzzle, visible sur l'image précédente.
 
