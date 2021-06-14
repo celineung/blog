@@ -79,7 +79,7 @@ export default class App extends React.Component {
             <FontAwesomeIcon icon={faSortDown} aria-hidden="true"/>
           </button>
           { this.state.openedFilterZone &&
-            <div>
+            <div className="post-cards-categories__wrapper">
               {this.state.categories.map((category) => (
                 <button key={category.name}
                         type="button"
