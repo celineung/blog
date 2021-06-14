@@ -458,10 +458,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2>Checklist du développeur</h2>
 <p>Je ne suis pas experte en accessibilité. Néanmoins, je comprends son importance et je me renseigne sur les moyens de rendre accessible une page web. Durant mon expérience chez <a href="">Pix</a>, j'ai aussi contribué à améliorer l'accessibilité de quelques unes de ses pages.</p>
 <p>Je regroupe ci-dessous quelques éléments qui attirent désormais mon attention sur l'accessibilité d'un site:</p>
-<h3>HTML valide</h3>
+<h3>1. HTML valide</h3>
 <p>La première étape consiste à vérifier que le HTML écrit a une syntaxe valide.</p>
 <p>N'hésitez pas à vous reférer aux documentations HTML ou au validateur <a href="https://validator.w3.org/">W3C validator</a>.</p>
-<h3>Navigation</h3>
+<h3>2. Navigation</h3>
 <ul>
 <li>Navigation au clavier</li>
 </ul>
@@ -480,7 +480,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Avoir des larges zones cliquables</li>
 </ul>
 <p>Parce que ce n'est pas simple de devoir cliquer sur une petite zone de texte, que ce soit avec la souris ou avec le doigt.</p>
-<h3>Structure</h3>
+<h3>3. Structure</h3>
 <ul>
 <li>Titre unique de la page</li>
 </ul>
@@ -525,7 +525,7 @@ pa</p>
   </a>
     </span></p>
 <p>On remarque que sur cette page web la hiérarchie des titres est bien respectée. On commence bien par un titre de niveau <code class="language-text">h1</code>. Les titres de niveau <code class="language-text">h2</code> sont en dessous d'un <code class="language-text">h1</code> et les <code class="language-text">h3</code> sont bien en-dessous de <code class="language-text">h2</code>.</p>
-<h3>Images et médias</h3>
+<h3>4. Images et médias</h3>
 <p>S'ils véhiculent une information, les contenus visuels (images, vidéos, icônes, etc), ont besoin d'être décrit via l'attribut <code class="language-text">alt</code>.</p>
 <p>Par exemple:</p>
 <div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>graphe.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>90% de nos utilisateurs sont sur mobiles, 10% sont sur Desktop<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
@@ -533,7 +533,7 @@ pa</p>
 <p>Dans le cas contraire où l'image n'apporte aucune information et qu'elle n'est là qu'à titre décorative, alors son attribut <code class="language-text">alt</code> doit être laissé vide:</p>
 <div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image-décorative.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
 <p>Pour apprendre à distinguer les images informatives des images décoratives, je vous invite à suivre ce guide de W3C: <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">arbre de décision</a>.</p>
-<h3>Formulaire</h3>
+<h3>5. Formulaire</h3>
 <ul>
 <li>Indiquer les champs obligatoires</li>
 </ul>
