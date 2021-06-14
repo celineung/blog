@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
-import SEO from "./seo";
+import Seo from "./seo";
 
 const Layout = ({ children, location, pageTitle, image, pathname, description }) => {
   const isHomepage = location === process.env.GATSBY_ROOT_URL;
@@ -21,7 +21,7 @@ const Layout = ({ children, location, pageTitle, image, pathname, description })
 
   return (
     <>
-      <SEO pageTitle={pageTitle} image={image} pathname={pathname} description={description}/>
+      <Seo pageTitle={pageTitle} image={image} pathname={pathname} description={description}/>
       {!isHomepage &&
         <Header siteTitle={title}/>
       }

@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const defaultLang = "fr";
 
-function SEO({ description, lang = defaultLang, meta, pageTitle, image: metaImage, pathname }) {
+function Seo({ description, lang = defaultLang, meta, pageTitle, image: metaImage, pathname }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -111,12 +111,12 @@ function SEO({ description, lang = defaultLang, meta, pageTitle, image: metaImag
   )
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: `en`,
   meta: [],
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
@@ -129,4 +129,4 @@ SEO.propTypes = {
   canonical: PropTypes.string,
 };
 
-export default SEO;
+export default Seo;
