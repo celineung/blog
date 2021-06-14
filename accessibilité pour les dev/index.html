@@ -1,0 +1,547 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}h1{margin-left:0;margin-right:0;margin-top:2.4375rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.21875rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h2{margin-left:0;margin-right:0;margin-top:1.625rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.40625rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:hsla(0,0%,0%,0.53);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}ul{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:0.85rem;line-height:1.625rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:1rem;line-height:1.625rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:calc(0.8125rem - 1px);padding-right:0;padding-top:0;margin-bottom:0.8125rem;border-left:4px solid hsla(0,0%,0%,0.13);color:hsla(0,0%,0%,0.53);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(0.8125rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:calc(0.8125rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}li > ul{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(0.8125rem / 2);}code{font-size:0.85rem;line-height:1.625rem;}kbd{font-size:0.85rem;line-height:1.625rem;}samp{font-size:0.85rem;line-height:1.625rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.08333rem;padding-right:1.08333rem;padding-top:0.8125rem;padding-bottom:calc(0.8125rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}h3,h4,h5,h6{margin-bottom:0.8125rem;margin-top:1.625rem;}ol,ul{margin-left:2.03125rem;}li>ol,li>ul{margin-left:2.03125rem;}a{color:#4078c0;text-decoration:none;}a:hover,a:active{text-decoration:underline;}</style><style data-href="/blog/styles.063b2d69c0c6eb1a10fa.css" id="gatsby-global-css">.header{background:#24292e;color:#fff;margin-bottom:45px;padding:16px}.header a{color:#fff;text-decoration:none}.header a:hover{text-decoration:underline}@media (min-width:768px){.header{margin-bottom:50px}}@media (min-width:960px){.header{margin-bottom:60px}}.post-cards__categories{padding:40px 0 30px;text-align:right;width:100%}@media (min-width:768px){.post-cards__categories{padding:40px 15px 30px}}.post-cards__main a{text-decoration:none}.post-cards__main a:focus,.post-cards__main a:hover{background-color:#f4f5f7}@media (min-width:768px){.post-cards__main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:960px){.post-cards__main{grid-template-columns:repeat(3,minmax(0,1fr))}}.post-cards-categories__button{background-color:transparent;border:none;color:#24292e;margin:0 5px 10px}.post-cards-categories__button svg{margin-left:10px;vertical-align:baseline}.post-cards-categories__category{background-color:transparent;border:1px solid #5b7a81;border-radius:5px;margin:5px;padding:5px 10px;text-transform:lowercase}.post-cards-categories__category--selected{background-color:#24292e;color:#fff}.post-cards-categories__category--selected span{padding-right:10px}.post-card{border-bottom:1px solid #eaeff1;color:#24292e;font-size:.85rem;height:100%;padding:20px 0;text-decoration:none}.post-card__header{margin-top:15px}.post-card__category{color:#4c6ed1;margin-bottom:2px;text-transform:capitalize}.post-card__title{font-weight:600;margin:0 0 5px}.post-card__excerpt{margin-bottom:10px}@media (min-width:768px){.post-card{padding:30px 20px}}@media (min-width:960px){.post-card{font-size:1rem}}.post__header{border-bottom:1px solid #e4eaed;margin-bottom:30px}.post__header h1{font-size:2.1rem}.post__date{display:block;margin:20px 0}.post .gatsby-resp-image-wrapper{margin:30px 0}.post h2{margin:30px 0 10px}.post h3{font-size:1.2rem;margin:20px 0 10px}.post pre{background-color:#f6f8fa;border-radius:5px;overflow-x:scroll;padding:10px 5px}@media (min-width:768px){.post__header{margin-bottom:50px}.post .gatsby-resp-image-wrapper{margin:50px 0}.post h2{margin:50px 0 10px}.post h3{margin:30px 0 10px}}.layout__banner{align-items:center;background-color:#24292e;color:#fff;display:flex;flex-direction:column;height:250px;justify-content:center;margin-bottom:30px}.layout__container{margin:0 auto;max-width:960px;padding:0 20px 25px}.layout-banner__title{font-size:2.3em;margin-bottom:20px}@media (min-width:768px){.layout__banner{margin-bottom:45px}}@media (min-width:960px){.layout{height:300px}.layout__banner{margin-bottom:50px}.layout-banner__title{font-size:2.5em}}.footer{display:flex;font-size:2rem;justify-content:center;margin:25px 0}.footer__link{margin:0 10px}.footer__link:hover{color:#24292e}@media (min-width:960px){.footer{margin:50px 0}}.footer-link__text{display:none}html{color:#24292e;font-size:16px}h1,h2,h3{border-bottom:none;margin:0;padding:0}.post-card__date,.post__date{color:#5b7a81;font-size:.75rem;text-transform:uppercase}button{cursor:pointer}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 3.6.2"/><title data-react-helmet="true">L&#x27;accessibilité pour les devs | Blog de Céline Ung</title><link data-react-helmet="true" rel="canonical" href="https://celineung.github.io/blog/accessibilité pour les dev"/><meta data-react-helmet="true" name="description" content="L&#x27;accessibilité web bénéficie à tous. Elle permet de rendre accessible un site internet pour le plus grand nombre de personnes, que ce soit…"/><meta data-react-helmet="true" property="og:title" content="L&#x27;accessibilité pour les devs | Blog de Céline Ung"/><meta data-react-helmet="true" property="og:description" content="L&#x27;accessibilité web bénéficie à tous. Elle permet de rendre accessible un site internet pour le plus grand nombre de personnes, que ce soit…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="@celineung"/><meta data-react-helmet="true" name="twitter:title" content="L&#x27;accessibilité pour les devs | Blog de Céline Ung"/><meta data-react-helmet="true" name="twitter:description" content="L&#x27;accessibilité web bénéficie à tous. Elle permet de rendre accessible un site internet pour le plus grand nombre de personnes, que ce soit…"/><meta data-react-helmet="true" property="og:image" content="https://celineung.github.io/blog/static/22b523e78f6e212c6765761af4a672f2/47498/planning-design-being-creative.jpg"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><style type="text/css">svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.225em;
+}
+.svg-inline--fa.fa-w-1 {
+  width: 0.0625em;
+}
+.svg-inline--fa.fa-w-2 {
+  width: 0.125em;
+}
+.svg-inline--fa.fa-w-3 {
+  width: 0.1875em;
+}
+.svg-inline--fa.fa-w-4 {
+  width: 0.25em;
+}
+.svg-inline--fa.fa-w-5 {
+  width: 0.3125em;
+}
+.svg-inline--fa.fa-w-6 {
+  width: 0.375em;
+}
+.svg-inline--fa.fa-w-7 {
+  width: 0.4375em;
+}
+.svg-inline--fa.fa-w-8 {
+  width: 0.5em;
+}
+.svg-inline--fa.fa-w-9 {
+  width: 0.5625em;
+}
+.svg-inline--fa.fa-w-10 {
+  width: 0.625em;
+}
+.svg-inline--fa.fa-w-11 {
+  width: 0.6875em;
+}
+.svg-inline--fa.fa-w-12 {
+  width: 0.75em;
+}
+.svg-inline--fa.fa-w-13 {
+  width: 0.8125em;
+}
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+}
+.svg-inline--fa.fa-w-15 {
+  width: 0.9375em;
+}
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-17 {
+  width: 1.0625em;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+.svg-inline--fa.fa-w-19 {
+  width: 1.1875em;
+}
+.svg-inline--fa.fa-w-20 {
+  width: 1.25em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-border {
+  height: 1.5em;
+}
+.svg-inline--fa.fa-li {
+  width: 2em;
+}
+.svg-inline--fa.fa-fw {
+  width: 1.25em;
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: 0.25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+.far.fa-pull-left,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: 0.3em;
+}
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+.far.fa-pull-right,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: 0.3em;
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
+:root .fa-flip-both {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse {
+  color: #fff;
+}</style><link rel="sitemap" type="application/xml" href="/blog/sitemap.xml/sitemap-index.xml"/><link rel="icon" href="/blog/favicon-32x32.png?v=4a9773549091c227cd2eb82ccd9c5e3a" type="image/png"/><link rel="manifest" href="/blog/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/blog/icons/icon-48x48.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="72x72" href="/blog/icons/icon-72x72.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="96x96" href="/blog/icons/icon-96x96.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="144x144" href="/blog/icons/icon-144x144.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="192x192" href="/blog/icons/icon-192x192.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="256x256" href="/blog/icons/icon-256x256.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="384x384" href="/blog/icons/icon-384x384.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="512x512" href="/blog/icons/icon-512x512.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N66VJWP')</script><link as="script" rel="preload" href="/blog/webpack-runtime-ea286fdade7f8319aac5.js"/><link as="script" rel="preload" href="/blog/framework-b6445d848003563fdaa2.js"/><link as="script" rel="preload" href="/blog/app-a852db901f8a6c429967.js"/><link as="script" rel="preload" href="/blog/a9a7754c-f46d016e1e8d835c676d.js"/><link as="script" rel="preload" href="/blog/commons-da142258a3b48c637d03.js"/><link as="script" rel="preload" href="/blog/component---src-templates-post-js-5d4c60724e3c4e229794.js"/><link as="fetch" rel="preload" href="/blog/page-data/accessibilité pour les dev/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/764694655.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N66VJWP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="header"><a href="/blog/">Blog de Céline Ung</a></header><div class="layout__container"><main><article class="post"><header class="post__header"><h1>L&#x27;accessibilité pour les devs</h1><time dateTime="2021-06-14" class="post__date">14 juin 2021</time></header><section class="post"><p>L'accessibilité web bénéficie à tous. Elle permet de rendre accessible un site internet pour le plus grand nombre de personnes, que ce soit des personnes ayant des handicaps temporaires (ex: bras cassé) ou handicaps permanents (ex: aveugles), que ce soit des personnes qui naviguent sur des smartphones ou des ordinateurs, ou encore des personnes qui ont une connection 5G ou une connection lente, etc.</p>
+<p>En tant que développeur, il est donc de notre devoir de nous assurer de l'accessibilité du produit final.</p>
+<h2>Checklist du développeur</h2>
+<p>Je ne suis pas experte en accessibilité. Néanmoins, je comprends son importance et je me renseigne sur les moyens de rendre accessible une page web. Durant mon expérience chez <a href="">Pix</a>, j'ai aussi contribué à améliorer l'accessibilité de quelques unes de ses pages.</p>
+<p>Je regroupe ci-dessous quelques éléments qui attirent désormais mon attention sur l'accessibilité d'un site:</p>
+<h3>HTML valide</h3>
+<p>La première étape consiste à vérifier que le HTML écrit a une syntaxe valide.</p>
+<p>N'hésitez pas à vous reférer aux documentations HTML ou au validateur <a href="https://validator.w3.org/">W3C validator</a>.</p>
+<h3>Navigation</h3>
+<ul>
+<li>Navigation au clavier</li>
+</ul>
+<p>L'une des premières choses que je fais pour vérifier l'accessibilité d'un site est de vérifier la navigabilité au clavier. Que se passe-t-il lorsque l'appuie sur la touche de tabulation ? En appuyant successivement sur la touche de tabulation, je dois pouvoir naviguer sur les boutons d'actions et les liens. La navigation clavier est très importante car de nombreuses personnes en situation de handicap moteur utilisent la navigation clavier.</p>
+<ul>
+<li>Site responsive</li>
+</ul>
+<p>Le site doit être accessible aussi bien sur grand écran que sur petit écran, sans barre de défilement horizontal.</p>
+<ul>
+<li>Bouton vs Liens</li>
+</ul>
+<p>Avec le CSS, il est possible de styliser un lien comme un bouton et inversement. Alors respectons la sémantique HTML: un lien <code class="language-text">&lt;a&gt;</code> permet d'accéder à une autre page web ou à un ancre, un bouton <code class="language-text">&lt;button&gt;</code> déclenche une action. Si l'on veut ouvrir une popup, on utilisera un tag <code class="language-text">&lt;button&gt;</code>. Si l'on veut rediriger vers la page d'accueil on utilisera un tag <code class="language-text">&lt;a&gt;</code>.</p>
+<p>Utiliser correctement les tags HTML évite les mauvaises surprises aux utilisateurs. Si un utilisateur malvoyant utilise un outil de lecteur d'écran, cet outil lui signale un bouton mais qu'après avoir cliqué dessus il est redirigé sur une nouvelle page, l'utilisateur qui ne s'y attendrait pas pourrait être perdu.</p>
+<p>Pour aller plus loin: <a href="https://a11y-101.com/design/button-vs-link">Différence entre bouton et lien</a></p>
+<ul>
+<li>Avoir des larges zones cliquables</li>
+</ul>
+<p>Parce que ce n'est pas simple de devoir cliquer sur une petite zone de texte, que ce soit avec la souris ou avec le doigt.</p>
+<h3>Structure</h3>
+<ul>
+<li>Titre unique de la page</li>
+</ul>
+<p>Chaque page doit avoir un titre unique, court et descriptif. En plus de contribuer à l'indexation d'une page (SEO), les personnes qui utilisent des outils d'assistance utilisent ce titre pour identifier le site web sans avoir besoin de naviguer dans son contenu.</p>
+<p>Pour aller plus loin: <a href="https://www.accede-web.com/notices/html-et-css/titre-de-la-page/renseigner-un-title-precis-sur-chaque-page/">Renseigner un <code class="language-text">&lt;title&gt;</code> précis sur chaque page</a>
+pa</p>
+<ul>
+<li>Titres de la page</li>
+</ul>
+<p>Une page doit pouvoir être parcourue rapidement via ses titres. Nous le faisons visuellement en lisant "les gros titres" de la page. Les personnes avec des outils d'assistance peuvent de leur côté afficher listes des titres et accéder directement au contenu voulu.</p>
+<p>Exemple de structure de la page <a href="http://www.gouvernement.fr">www.gouvernement.fr</a>:</p>
+<p>![Structure de la page d'accueil <a href="http://www.gouvernement.fr%5D(../images/posts/20210614_web_a11y_for_devs/Screenshot">www.gouvernement.fr](../images/posts/20210614_web_a11y_for_devs/Screenshot</a> 2021-06-07 at 23.52.42.png)</p>
+<p>On remarque que sur cette page web la hiérarchie des titres est bien respectée. On commence bien par un titre de niveau <code class="language-text">h1</code>. Les titres de niveau <code class="language-text">h2</code> sont en dessous d'un <code class="language-text">h1</code> et les <code class="language-text">h3</code> sont bien en-dessous de <code class="language-text">h2</code>.</p>
+<h3>Images et médias</h3>
+<p>S'ils véhiculent une information, les contenus visuels (images, vidéos, icônes, etc), ont besoin d'être décrit via l'attribut <code class="language-text">alt</code>.</p>
+<p>Par exemple:</p>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>graphe.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>90% de nos utilisateurs sont sur mobiles, 10% sont sur Desktop<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
+<p>Ici, si l'utilisateur ne voit pas l'image et si l'attribut <code class="language-text">alt</code> était absent, alors l'utilisateur aurait perdu une information. Ce texte est très utile: il sera interprété par les lecteurs d'écran, mais sera aussi affiché lorsque les images ne se chargent pas.</p>
+<p>Dans le cas contraire où l'image n'apporte aucune information et qu'elle n'est là qu'à titre décorative, alors son attribut <code class="language-text">alt</code> doit être laissé vide:</p>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image-décorative.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
+<p>Pour apprendre à distinguer les images informatives des images décoratives, je vous invite à suivre ce guide de W3C: <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">arbre de décision</a>.</p>
+<h3>Formulaire</h3>
+<ul>
+<li>Indiquer les champs obligatoires</li>
+</ul>
+<p>Pour aller plus loin: <a href="https://www.accede-web.com/notices/fonctionnelle-graphique/formulaires/indiquer-clairement-les-champs-obligatoires/">Indiquer clairement les champs obligatoires</a></p>
+<ul>
+<li>Avoir un label sur chaque champ</li>
+</ul>
+<p>Un placeholder à l'intérieur d'un input ne sert pas de label car peu accessible aux outils d'assistances. Il nous faut pouvoir expliciter ce que correspond chaque champ de saisie.</p>
+<p>Visuellement nous pouvons avoir:</p>
+<p>![Formulaire de connection de Github](../images/posts/20210614_web_a11y_for_devs/Screenshot 2021-06-09 at 00.32.06.png)</p>
+<p>Implémenté avec un <code class="language-text">&lt;label&gt;</code> . Notons ci-dessous que le label est ainsi lié à l'input via les attribut <code class="language-text">for</code> et <code class="language-text">id</code>:</p>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>login<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  Username or email address
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>login<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>login<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-control input-block<span class="token punctuation">"</span></span> <span class="token attr-name">autocapitalize</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span> <span class="token attr-name">autocorrect</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span> <span class="token attr-name">autocomplete</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">autofocus</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>autofocus<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
+<p>Pour aller plus loin: <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Label">Élement label</a></p>
+<p>Dans certains cas, il se peut que nous ne voulions pas afficher à l'écran le label. Il faut alors que s'assurer que les outils d'assistance puissent décrire le champs. Imaginez si tous les champs de formulaires n'ont pas de labels, comment une personne malvoyante avec son outil d'assistance pourrait-elle distinguer un champ d'un autre ? Plusieurs solutions existent en passant du CSS à l'ajout de nouveaux attributs... Pour aller plus loin: <a href="https://www.w3.org/WAI/tutorials/forms/labels/">Labelling Controls</a></p>
+<h2>Législation</h2>
+<p>L'État impose désormais un accès équitable au contenu public en ligne.</p>
+<p>Cela concerne non seulement les sites du public mais aussi du privé qui répondent à des besoins d’intérêt général, ou qui génèrent un chiffre d'affaire annuel de 250 millions d’euros.</p>
+<p>Pour en savoir plus sur les types de contenu concernés: <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#contenus-concern%C3%A9s">Référentiel général d'amélioration de l'accessibilité – RGAA Version 4.1</a></p>
+<p>Pour être en conformité:</p>
+<ul>
+<li>
+<p>le site doit <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/">suivre le référentiel d'amélioration de l'accessibilité (RGAA)</a></p>
+</li>
+<li>
+<p>ou sinon le site doit posséder une page de déclaration du niveau d'accessibilité atteint ("Conformité totale": 100% les critères du RGAA sont respectés, "Conformité partielle" ou "Non-conformité"). Pour en savoir plus sur ce que doit contenir cette déclaration: <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#d%C3%A9claration-daccessibilit%C3%A9">Déclaration d’accessibilité</a></p>
+</li>
+</ul>
+<p>En cas de non conformité aux exigences, les sociétés concernées risquent une amende fixée à 20 000 euros annuel par produit et par année.</p>
+<h2>Plugin Wave / Firefox Web Developer</h2>
+<p>Lors de mes développements, j'utilise les plugins Wave ou Firefox Web Developer pour m'aider à améliorer l'accessibilité des sites web.</p>
+<h3>Wave</h3>
+<p>Ce plugin disponible sur Chrome et Firefox permet d'avoir des informations sur l'accessibilité d'un site web.</p>
+<p>Je me positionne sur un site et j'active le plugin:</p>
+<p>![Résumé de l'accessibilité de la page obtenu avec le plugin Wave](../images/posts/20210614_web_a11y_for_devs/Screenshot 2021-06-14 at 20.43.10.png)</p>
+<p>Wave nous fournit instantanément un résumé de l'état d'accessibilité d'un site. En naviguant dans les différents onglets, Wave pointe les erreurs et donne des explications pour nous amener à les corriger.</p>
+<p>On retrouve sur Wave la structure des titres de la page, les problèmes de contrastes, les oublis d'attributs <code class="language-text">alt</code>, <code class="language-text">label</code>, etc.</p>
+<h3>Firefox Web Developer</h3>
+<p>En complément, j'utilise aussi l'addon Firefox Web Developer:</p>
+<p>![Menu du plugin Firefox Web Developer](../images/posts/20210614_web_a11y_for_devs/Screenshot 2021-06-14 at 20.52.12.png)</p></section></article></main></div><footer class="footer"><a href="https://github.com/celineung/blog" class="footer__link"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><span class="footer-link__text">Github</span></a><a href="https://linkedin.com/in/celine-ung" class="footer__link"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg><span class="footer-link__text">LinkedIn</span></a></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/accessibilité pour les dev";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-56e919f1fc9a731e5927.js"],"app":["/app-a852db901f8a6c429967.js"],"component---src-pages-404-js":["/component---src-pages-404-js-e187eebfff0a4d8d14c6.js"],"component---src-pages-index-js":["/component---src-pages-index-js-429413c86ef1e3c067e3.js"],"component---src-templates-post-js":["/component---src-templates-post-js-5d4c60724e3c4e229794.js"]};/*]]>*/</script><script src="/blog/polyfill-56e919f1fc9a731e5927.js" nomodule=""></script><script src="/blog/component---src-templates-post-js-5d4c60724e3c4e229794.js" async=""></script><script src="/blog/commons-da142258a3b48c637d03.js" async=""></script><script src="/blog/a9a7754c-f46d016e1e8d835c676d.js" async=""></script><script src="/blog/app-a852db901f8a6c429967.js" async=""></script><script src="/blog/framework-b6445d848003563fdaa2.js" async=""></script><script src="/blog/webpack-runtime-ea286fdade7f8319aac5.js" async=""></script></body></html>
