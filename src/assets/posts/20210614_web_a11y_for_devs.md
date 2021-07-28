@@ -2,7 +2,7 @@
 title: "L'accessibilité pour les devs"
 date: "2021-06-14"
 category: "A11Y"
-slug: "accessibilité pour les dev"
+slug: "accessibilite-pour-les-dev"
 illustration: "../images/posts/post_cards/planning-design-being-creative.jpeg"
 ---
 
