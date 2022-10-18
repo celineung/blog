@@ -16,7 +16,7 @@ Le but d'un système de contrôle de version est de pouvoir naviguer entre les d
 
 ## Quand faire un commit?
 
-Afin de pouvoir nommer clairement un commit, celui-ci doit contenir que les changement répondant à un objectif simple, qui sera le nom du commit. On parle de **commits atomiques**.
+Afin de pouvoir nommer clairement un commit, celui-ci ne doit contenir que les changement répondant à un objectif simple, qui sera le nom du commit. On parle de **commits atomiques**.
 
 Il peut être plus compliqué à faire plusieurs petits commits quand on est habitué à en faire un gros à la fin d'un développement, mais une fois que l'on a la pratique, on se s'en passe plus !
 
