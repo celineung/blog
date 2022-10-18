@@ -3,7 +3,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-N66VJWP')</script></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N66VJWP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="header"><a href="/blog/">Blog de Céline Ung</a></header><div class="layout__container"><main><article class="post"><header class="post__header"><h1>Installation de Flutter sur MacOS</h1><time dateTime="2020-03-26" class="post__date">26 mars 2020</time></header><section class="post"><p>Flutter est un framework de conception d'applications multiplateforme pour Android et ios. Cet article détaillera les étapes d'installations de Flutter sur Mac.</p>
-<p>##Récupération du SDK Flutter</p>
+<h2>Récupération du SDK Flutter</h2>
 <p>Pour commencer, il faut récupérer le SDK de Flutter. L'installation de Flutter inclu aussi Dart. Il n'y a donc pas besoin de l'installer manuellement.</p>
 <p>Pour récupérer Flutter, le plus simple est de cloner le repository git:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># Dans /workspace
@@ -25,7 +25,7 @@ export FLUTTER_PATH=/workspace/flutter/bin export PATH="$PATH:$FLUTTER_PATH"</co
     ✗ Android SDK is missing command line tools; download from https://developer.android.com/studio#downloads
     • Try re-installing or updating your Android SDK,
       visit https://flutter.dev/setup/#android-setup for detailed instructions.</code></pre></div>
-<p>##Récupération du SDK Android</p>
+<h2>Récupération du SDK Android</h2>
 <p>La commande <code class="language-text">flutter doctor</code> nous indique où télécharger Android Studio: "download from <a href="https://developer.android.com/studio#downloads">https://developer.android.com/studio#downloads</a>". Ce lien amène à télécharger un fichier exécutable Mac.</p>
 <p>Après l'avoir lancé, nous configurons l'IDE via le "Android Studio Setup Wizard" et nous finissons par arriver à l'écran suivant:</p>
 <p><span

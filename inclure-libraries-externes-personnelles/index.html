@@ -21,14 +21,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>npm workspace</li>
 <li>repository github</li>
 </ul>
-<p>##inclusion du module via filepath</p>
+<h2>Inclusion du module via filepath</h2>
 <p>La solution la plus simple pour l'exemple étudié ici serait de spécifier directement l'emplacement du module dans le package.json:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">// project1/package.json
 "devDependencies": { 
   "ui-components": "file:../ui-components" 
 }</code></pre></div>
 <p>Il suffit ensuite de faire un npm install ! On voit apparaître le dossier pix-ui dans le node_modules de project1.</p>
-<p>##npm link</p>
+<h2>npm link</h2>
 <p>La deuxième piste explorée est l'utilisation de npm-link.</p>
 <p><em>npm-link</em> permet de charger un module depuis n'importe quel chemin sur l'ordinateur.</p>
 <p>Il s'utilise de la manière suivante:</p>
@@ -55,7 +55,7 @@ lrwxr-xr-x   1 username  admin    59B Mar 18 16:58 ui-components@ -> /path/to/ui
 <blockquote>
 <p>Sinon, il est aussi possible d'exécuter npm unlink ui-components depuis project1 pour supprimer le lien symbolique local, puis npm unlink depuis ui-components pour supprimer le lien symbolique global.</p>
 </blockquote>
-<p>##npm-workspace</p>
+<h2>npm-workspace</h2>
 <p>npm-workspace est en quelque sorte un wrapper de npm link: il permet de centraliser les liens et nous évite d'avoir à écrire sur notre terminal tous les npm link manuellement.</p>
 <p>Il s'installe de manière globale:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ npm install -g npm-workspace</code></pre></div>
@@ -73,7 +73,7 @@ lrwxr-xr-x   1 username  admin    59B Mar 18 16:58 ui-components@ -> /path/to/ui
 }</code></pre></div>
 <p>Puis il suffit de lancer la commande npm-workspace install qui crée nos liens symboliques puis lance un npm install des autres modules:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ npm-workspace install</code></pre></div>
-<p>##repository github</p>
+<h2>Repository github</h2>
 <p>La dernière piste explorée consiste à simplement mettre le lien de notre librairie dans le package.json. D'après la documentation de <a href="https://docs.npmjs.com/cli/install">npm install</a>, il est possible de spécifier l'installation de notre module via son chemin et sa branche github, bitbucket, ou encore gitlab.</p>
 <p>Toutefois cela nécessite que ui-components soit dans un repo entièrement séparé de project1. Je n'ai pas réussi à le faire fonctionner en les mettant tous les deux dans le même repo. Il semblerait que npm ne gère pas encore cela.</p>
 <p>Si j'avait mis les deux dans des repos séparés, il aurait suffit de modifier le package.json de cette manière:</p>
