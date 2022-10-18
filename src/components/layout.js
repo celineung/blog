@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
@@ -27,7 +27,9 @@ const Layout = ({ children, location, pageTitle, image, pathname, description })
       }
       {isHomepage &&
         <div className="layout__banner" role="banner">
-          <h1 className="layout-banner__title">{title}</h1>
+          <h1 className="layout-banner__title">
+            <Link to="/">{ title }</Link>
+          </h1>
           <div>tech &#8226; méthodologie &#8226; retour d'expérience</div>
         </div>
       }

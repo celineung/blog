@@ -23,6 +23,15 @@
     margin-bottom: 20px;
     font-size: 2.3em;
   }
+  &__title a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+    }
+  }
 }
 
 @include device-is('tablet') {
