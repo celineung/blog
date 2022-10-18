@@ -8,7 +8,7 @@ illustration: "../images/posts/post_cards/hands_typing.jpg"
 
 Après avoir [installé Flutter sur mon Macbook](https://celineung.github.com/blog/installation-de-flutter-sur-macos), la deuxième étape est de pouvoir lancer une application sur mon téléphone.
 
-##Préparer le lancement dans un navigateur web
+## Préparer le lancement dans un navigateur web
 
 Pour pouvoir lancer une application dans un navigateur Chrome, il faut basculer sur la version beta de Flutter et activer l'option --enable-web:
 
@@ -28,7 +28,7 @@ Chrome     • chrome      • web-javascript • Google Chrome 80.0.3987.1
 Web Server • web-server  • web-javascript • Flutter Tools
 ```
 
-##Créer une application
+## Créer une application
 
 Il suffit de créer lancer la commander flutter create suivi du nom de mon application:
 
@@ -43,7 +43,7 @@ $ cd my_application
 $ flutter run -d chrome
 ```
 
-##Lancer sur mon téléphone mobile
+## Lancer sur mon téléphone mobile
 
 Avant de pouvoir lancer une application sur un vrai téléphone Android, il faut y activer le USB debugging:
 

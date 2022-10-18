@@ -8,7 +8,7 @@ illustration: "../images/posts/post_cards/coding_on_laptop.jpg"
 
 java.lang.Object possède une méthode equals() et une méthode hashcode(). Cet article abordera la différence entre ces deux méthodes et pourquoi les surcharger en Java.
 
-##equals
+## equals
 
 Cette méthode vérifie si deux objets sont égaux en utilisant "==", c'est-à-dire qu'elle vérifie si deux objets ont la même référence:
 
@@ -34,7 +34,7 @@ public void shouldVerifyInequalityOfObjectsWithEquals() {
     assertThat(car1.equals(car2)).isFalse();
 }
 ```
-##hashcode
+## hashcode
 
 Comme l'indique sa documentation, "the hashCode method [...] does return distinct integers for distinct objects. (This is typically implemented by converting the internal address of the object into an integer [...]".
 
@@ -63,7 +63,7 @@ La méthode hashcode doit suivre le contrat suivant (spécifié dans la Javadoc)
 
 A remarquer que deux objets ayant le même hashcode ne sont pas nécessairement égaux via equals().
 
-##surcharger equals
+## Surcharger equals
 
 Surcharger la méthode equals permet de changer le comportement de la méthode, afin de distinguer l'égalité objet de l'égalité fonctionnelle.
 
@@ -97,7 +97,7 @@ public void shouldVerifyInequalityOfObjectsWithEquals() {
     assertThat(car1.equals(car2)).isTrue();
 }
 ```
-##surcharger hashcode
+## Surcharger hashcode
 
 Lorsque equals ou hashcode est surchargé, alors les deux doivent l'être.
 
@@ -116,7 +116,7 @@ public void shouldShowOverridingEqualsNeedsOverrideHashcode() {
     //est-ce le comportement souhaité?
 }
 ```
-##combiner equals et hashcode pour un set
+## Combiner equals et hashcode pour un set
 
 Pour rappel, notre classe Car ne surcharge que la méthode equals pour le moment.
 

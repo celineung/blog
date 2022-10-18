@@ -25,7 +25,7 @@ Les solutions abordées dans cet article seront:
 - npm workspace
 - repository github
 
-##inclusion du module via filepath
+## Inclusion du module via filepath
 
 La solution la plus simple pour l'exemple étudié ici serait de spécifier directement l'emplacement du module dans le package.json:
 
@@ -38,7 +38,7 @@ La solution la plus simple pour l'exemple étudié ici serait de spécifier dire
 
 Il suffit ensuite de faire un npm install ! On voit apparaître le dossier pix-ui dans le node_modules de project1.
 
-##npm link
+## npm link
 
 La deuxième piste explorée est l'utilisation de npm-link.
 
@@ -83,7 +83,7 @@ Voilà! Il est désormais possible de faire npm install depuis project1 et d'uti
 
 > Sinon, il est aussi possible d'exécuter npm unlink ui-components depuis project1 pour supprimer le lien symbolique local, puis npm unlink depuis ui-components pour supprimer le lien symbolique global.
 
-##npm-workspace
+## npm-workspace
 
 npm-workspace est en quelque sorte un wrapper de npm link: il permet de centraliser les liens et nous évite d'avoir à écrire sur notre terminal tous les npm link manuellement.
 
@@ -119,7 +119,7 @@ Puis il suffit de lancer la commande npm-workspace install qui crée nos liens s
 $ npm-workspace install
 ```
 
-##repository github
+## Repository github
 
 La dernière piste explorée consiste à simplement mettre le lien de notre librairie dans le package.json. D'après la documentation de [npm install](https://docs.npmjs.com/cli/install), il est possible de spécifier l'installation de notre module via son chemin et sa branche github, bitbucket, ou encore gitlab.
 

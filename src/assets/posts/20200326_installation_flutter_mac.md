@@ -8,7 +8,7 @@ illustration: "../images/posts/post_cards/hands_typing.jpg"
 
 Flutter est un framework de conception d'applications multiplateforme pour Android et ios. Cet article détaillera les étapes d'installations de Flutter sur Mac.
 
-##Récupération du SDK Flutter
+## Récupération du SDK Flutter
 
 Pour commencer, il faut récupérer le SDK de Flutter. L'installation de Flutter inclu aussi Dart. Il n'y a donc pas besoin de l'installer manuellement.
 
@@ -53,7 +53,7 @@ Doctor summary (to see all details, run flutter doctor -v):
       visit https://flutter.dev/setup/#android-setup for detailed instructions.
 ```
 
-##Récupération du SDK Android
+## Récupération du SDK Android
 
 La commande `flutter doctor` nous indique où télécharger Android Studio: "download from https://developer.android.com/studio#downloads". Ce lien amène à télécharger un fichier exécutable Mac.
 
