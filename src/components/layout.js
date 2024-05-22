@@ -5,6 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import Seo from "./seo";
+import EndOfWebsite from "./end-of-website";
 
 const Layout = ({ children, location, pageTitle, image, pathname, description }) => {
   const isHomepage = location === process.env.GATSBY_ROOT_URL;
@@ -34,6 +35,7 @@ const Layout = ({ children, location, pageTitle, image, pathname, description })
         </div>
       }
       <div className="layout__container">
+        <EndOfWebsite />
         <main>{children}</main>
       </div>
       <Footer />
